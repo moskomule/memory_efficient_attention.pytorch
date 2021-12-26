@@ -32,6 +32,6 @@ def test_autograd(qkv, checkpointing, out_of_place):
     out = self_attention(q, k, v)
     out.sum().backward()
     sl_grad = qkv.weight.grad.clone()
-
-    assert torch.allclose(eff_grad, sl_grad, rtol=1e-4, atol=1e-6)
     qkv.zero_grad()
+
+    assert torch.allclose(eff_grad, sl_grad, rtol=1e-4, atol=1e-5)
