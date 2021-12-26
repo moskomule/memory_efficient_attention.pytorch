@@ -56,7 +56,7 @@ def efficient_attention(query: torch.Tensor,
                         checkpointing: bool = False,
                         out_of_place: bool = False
                         ) -> torch.Tensor:
-    """ A sub-square complexity implementation of self-attention
+    """ A sub-quadratic complexity implementation of self-attention
 
     Args:
         query: query of shape BxHxNxD
