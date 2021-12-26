@@ -39,7 +39,7 @@ def _efficient_attention(query: torch.Tensor,
     for i, query in enumerate(query.split(chunk_size, dim=-2)):
         score = torch.einsum("bhqd,bhkd->bhqk", query, key)
         if out_of_place:
-            score = (score - score.amax(dim=-1, keepdim=True)).exp()
+            score = (score - score.amax(dim=-1, keepdim=True).detach()).exp()
         else:
             score -= score.amax(dim=-1, keepdim=True).detach()
             score.exp_()

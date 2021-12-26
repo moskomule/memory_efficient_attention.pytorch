@@ -3,7 +3,6 @@
 A human-readable PyTorch implementation of "Self-attention Does Not Need O(n^2) Memory" (Rabe&Staats'21).
 
 ```python
-
 def efficient_attention(query: torch.Tensor,
                         key: torch.Tensor,
                         value: torch.Tensor,
@@ -28,4 +27,11 @@ def efficient_attention(query: torch.Tensor,
 
     """
     ...
+```
+
+## Requirements
+
+```
+Python>=3.9
+PyTorch>=1.10
 ```
