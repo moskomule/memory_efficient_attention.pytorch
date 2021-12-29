@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from efficient_attention import efficient_attention, self_attention
+from memory_efficient_attention import efficient_attention, self_attention
 
 
 @pytest.mark.parametrize('out_of_place', [True, False])

@@ -35,3 +35,22 @@ def efficient_attention(query: torch.Tensor,
 Python>=3.9
 PyTorch>=1.10
 ```
+
+## Installation
+
+```
+pip install -U git+https://github.com/moskomule/memory_efficient_attention.pytorch
+```
+
+## Reference
+
+```bibtex
+@misc{rabe2021selfattention,
+      title={Self-attention Does Not Need $O(n^2)$ Memory}, 
+      author={Markus N. Rabe and Charles Staats},
+      year={2021},
+      eprint={2112.05682},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
